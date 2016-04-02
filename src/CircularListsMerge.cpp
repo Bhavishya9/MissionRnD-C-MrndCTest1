@@ -73,7 +73,7 @@ struct node * mergeSort(struct node *list1, struct node *list2){
 
 int merge_circularlists(struct node **head1, struct node **head2){
 	//Returns Length of merged Sorted circular SLL and also points *head1 to final SLL .
-	if (*head1 == NULL && *head2 == NULL)
+	if (*head1 == NULL || *head2 == NULL)
 		return -1;
 	struct node* current1 = (*head1)->next;
 	while (current1->next->data != (*head1)->data)
